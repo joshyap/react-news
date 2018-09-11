@@ -34,16 +34,17 @@ class App extends Component {
         <h3>My name is { person.name } and I am { person.age } years old.</h3>
         <p>this is a test of hot reloading</p>
         <p><sup>spoiler: it is HOT</sup></p>
-        {list.map(function(item) {
-          return (
+        {list.map(item => // {
+          // return ( // removing this {} on line above and the difference between a block body and a concise body
             <div key={item.objectID}>
               <span><a href={item.url}>{item.title}</a></span>
               <span>{item.author}</span>
               <span>{item.num_comments}</span>
               <span>{item.points}</span>
             </div>
-          );
-        })}
+          // ); // ALSO REMOVED
+        //}
+        )}
       </div>
     );
   }
